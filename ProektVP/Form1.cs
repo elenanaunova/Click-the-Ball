@@ -17,14 +17,19 @@ namespace ProektVP
             InitializeComponent();
         }
 
-        private void choice1_Click(object sender, EventArgs e)
+        
+
+        private void choice2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
+        private void choiceStart_Click(object sender, EventArgs e)
         {
             this.Hide();
             CBMenu cbMenu = new CBMenu();
             cbMenu.ShowDialog();
-
         }
-
-        
     }
 }
