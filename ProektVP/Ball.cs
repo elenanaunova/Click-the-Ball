@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 namespace ProektVP
 {
     public class Ball
@@ -13,27 +13,37 @@ namespace ProektVP
         public float X { get; set; }
         public float Y { get; set; }
         public Color color { get; set; }
-
-        public double Angle { get; set; }
+        
         public double Velocity { get; set; }
+        public static int[] Angle= { 60, 270 };
+        Random r;
 
         public float velocityX { get; set; }
         public float velocityY { get; set; }
 
-        public Ball(int ra, float x, float y, Color c)
+
+        public Ball(int ra, float x, float y, float v, Color c)
         {
             RADIUS = ra;
             X = x;
             Y = y;
             color = c;
+            Velocity = v;
 
-            Velocity = 20;
-            Random r = new Random();
-            Angle = r.NextDouble() * 2 * Math.PI;
-            velocityX = (float)(Math.Cos(Angle) * Velocity);
-            velocityY = (float)(Math.Sin(Angle) * Velocity);
+            r = new Random();
+
+            velocityX = (float)(Math.Cos(Angle[r.Next(0, 2)]) * Velocity);
+            velocityY = (float)(Math.Sin(Angle[r.Next(0, 2)]) * Velocity);
         }
-
+        public Ball(int ra,int angle,int Velocity,int x,int y,Color c)
+        {
+            RADIUS = ra;
+            velocityX = (float)(Math.Cos(angle) * Velocity);
+            velocityY = (float)(Math.Sin(angle) * Velocity);
+            X = x;
+            Y = y;
+            color = c;
+        }
         public void Draw(Graphics g)
         {
             Brush b = new SolidBrush(color);
@@ -50,7 +60,7 @@ namespace ProektVP
             else
             {
                 if (color == Color.Red)
-                    MoveDown(height, x, y);
+                    MoveDown(height);
                 else
                     MoveClicked(left, top, width, height);
             }
@@ -58,52 +68,79 @@ namespace ProektVP
 
         public bool isClicked(float x, float y)
         {
-            return (((X - x) * (X - x) + (Y - y) * (Y - y)) <= RADIUS * RADIUS && color==Color.Red);
+            return (((X - x) * (X - x) + (Y - y) * (Y - y)) <= RADIUS * RADIUS);
         }
-
-        public void MoveDown(float height, float x, float y)
+        public void MoveDown(float height)
         {
-            if (color == Color.Red && !isClicked(x,y))
+            if (color == Color.Red && RADIUS!=35)
             {
-                Y = Y - 20;
+                Y = Y + 6;
             }
+            
         }
-
+        public bool gameOver(float height)
+        {
+            if (color == Color.Red && Y>305 && RADIUS!=35)
+                return true;
+            return false;
+        }
         public void MoveClicked(int left, int top, int width, int height)
         {
+            Random r = new Random();
+            
             int nextX = (int)(X + velocityX);
             int nextY = (int)(Y + velocityY);
-            int lft = left + RADIUS;
-            int rgt = left + width - RADIUS;
-            int tp = top + RADIUS;
-            int btm = top + height - RADIUS;
 
-            if (nextX <= lft)
+            if (nextX <= RADIUS || nextX>=width-RADIUS)
             {
-                nextX = lft + (lft - nextX);
                 velocityX = -velocityX;
+                nextX = (int)(X + velocityX);
             }
-            if (nextX >= rgt)
+            
+            if (nextY <= RADIUS)
             {
-                nextX = rgt - (nextX - rgt);
-                velocityX = -velocityX;
-
-            }
-            if (nextY <= tp)
-            {
-                nextY = tp + (tp - nextY);
                 velocityY = -velocityY;
+                nextY = (int)(this.Y + velocityY);
             }
-            if (color != Color.Red)
+            if (color != Color.Red || ( color==Color.Red && RADIUS==35))
             {
-                if (nextY >= btm)
+                if (nextY >= 308)
                 {
-                    nextY = btm - (nextY - btm);
+                    
                     velocityY = -velocityY;
+                    nextY = (int)(nextY + velocityY);
                 }
             }
             X = nextX;
             Y = nextY;
+        }
+        public bool touchesRight(Ball b)
+        {
+            return (((X - b.X) * (X - b.X) + (Y - b.Y) * (Y - b.Y)) <= RADIUS * RADIUS);
+        }
+        public void MoveUp()
+        {
+           if(Y-15>RADIUS)
+            Y = Y - 15;
+           
+        }
+
+        public void promeniRadius()
+        {
+            if (color == Color.Red)
+            {
+                if (RADIUS == 30)
+                    RADIUS = 20;
+                else
+                    RADIUS = 30;
+            }
+        }
+        public void promeniRadiusPlavo()
+        {
+            if (color == SystemColors.Highlight)
+            {
+                RADIUS = 30;
+            }
         }
     }
 }
