@@ -120,6 +120,7 @@
             this.Controls.Add(this.button1);
             this.Name = "CBMenu";
             this.Text = "Click the ball";
+           // this.Load += new System.EventHandler(this.CBMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
