@@ -118,22 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bukvi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bukvi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pozadina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pozadina.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue-glowing-dust-black-horizontal-background-backlight-bottom-template-project-sparkle-dots-round-tinse-tinsel-99441488" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue-glowing-dust-black-horizontal-background-backlight-bottom-template-project-sparkle-dots-round-tinse-tinsel-99441488.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blue-glowing-dust-black-horizontal-background-backlight-bottom-template-project-sparkle-dots-round-tinse-tinsel-994414881" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blue-glowing-dust-black-horizontal-background-backlight-bottom-template-project-sparkle-dots-round-tinse-tinsel-994414881.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bukvi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bukvi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blue-glowing-dust-black-horizontal-background-backlight-bottom-template-project-sparkle-dots-round-tinse-tinsel-99441488" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue-glowing-dust-black-horizontal-background-backlight-bottom-template-project-sparkle-dots-round-tinse-tinsel-99441488.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="game" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\game.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\click.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pozadina1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pozadina1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
