@@ -27,8 +27,8 @@ namespace ProektVP
         private void button2_Click(object sender, EventArgs e)
         {
             string rules = "1. Click the ball before it falls into the water." +
-                "\n" + "2. Each click is one point.\n3. Only once, you can change 20 points for one more chance." +
-                "\n\n                    Try to reach Level 10. GOOD LUCK!";
+                "\n" + "2. Each click is one point." +
+                "\n\n            Try to reach Level 7. GOOD LUCK!";
             MessageBox.Show(rules, "Rules of the game", MessageBoxButtons.OK);
         }
 
